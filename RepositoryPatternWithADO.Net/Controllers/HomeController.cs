@@ -19,6 +19,12 @@ namespace RepositoryPatternWithADO.Net.Controllers
             return View(employee);
         }
 
+        public ActionResult Details(int? id)
+        {
+            var employee = db.GetEmployeeById(id);
+            return View(employee);
+        }
+
         public ActionResult Create()
         {
             return View();

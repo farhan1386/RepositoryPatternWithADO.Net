@@ -29,7 +29,7 @@ namespace RepositoryPatternWithADO.Net.Repository
                         Position = rdr["Position"].ToString(),
                         Office = rdr["Office"].ToString(),
                         Age = Convert.ToInt32(rdr["Age"]),
-                        Salary = Convert.ToDecimal(rdr["Salary"])
+                        Salary = Convert.ToInt32(rdr["Salary"])
                     };
                     employees.Add(employee);
                 }
@@ -53,7 +53,7 @@ namespace RepositoryPatternWithADO.Net.Repository
                     employee.Position = rdr["Position"].ToString();
                     employee.Office = rdr["Office"].ToString();
                     employee.Age = Convert.ToInt32(rdr["Age"]);
-                    employee.Salary = Convert.ToDecimal(rdr["Salary"]);
+                    employee.Salary = Convert.ToInt32(rdr["Salary"]);
                 }
                 return employee;
             }
