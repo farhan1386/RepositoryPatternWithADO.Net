@@ -1,0 +1,47 @@
+﻿@model RepositoryPatternWithADO.Net.Models.Employee
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h3>Edit Employee</h3>
+    </div>
+    <div class="card-body">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(m => m.Id)
+            <div class="form-group">
+                @Html.LabelFor(m => m.Name)
+                @Html.EditorFor(m => m.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.Name)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Position)
+                @Html.EditorFor(m => m.Position, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.Position)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Office)
+                @Html.EditorFor(m => m.Office, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.Office)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Age)
+                @Html.EditorFor(m => m.Age, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.Age)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Salary)
+                @Html.EditorFor(m => m.Salary, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.Salary)
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary rounded-0">Update</button>
+            </div>
+        }
+    </div>
+</div>
+
