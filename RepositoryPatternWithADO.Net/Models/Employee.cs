@@ -24,6 +24,6 @@ namespace RepositoryPatternWithADO.Net.Models
         public int Age { get; set; }
 
         [Required(ErrorMessage = "Enter your salary")]
-        public decimal Salary { get; set; }
+        public int Salary { get; set; }
     }
 }
